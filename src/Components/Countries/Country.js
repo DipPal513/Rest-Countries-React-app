@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Country = () => {
+const Country = (props) => {
   return (
     <div>
       <h5>region : {props.region}</h5>
@@ -8,3 +8,5 @@ export const Country = () => {
     </div>
   );
 };
+
+export default Country;

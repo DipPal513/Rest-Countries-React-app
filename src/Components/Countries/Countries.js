@@ -1,5 +1,6 @@
-import React from 'react';
-import function Countries() {
+import {React,useEffect,useState} from 'react';
+import Country from './Country';
+ function Countries() {
     const [countries, setCountries] = useState([]);
     useEffect(() => {
         fetch("https://restcountries.eu/rest/v2/all")
@@ -12,6 +13,7 @@ import function Countries() {
             {countries.map((country) => {
                 return <Country name={country.name} region={country.region} />;
             })}
+      
         </div>
     );
 };
